@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cronología de Nuestro Amor</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Música -->
+<audio id="love-music" src="music/love_theme.mp3" autoplay loop></audio>
+<button id="music-toggle">🔊</button>
+
+<!-- Título -->
+<header id="main-title">
+  <h1>Cronología de Nuestro Amor</h1>
+</header>
+
+<!-- Mensaje de desplazamiento -->
+<div id="scroll-alert">
+  ⬅️ Desliza o haz scroll para ver nuestra historia ➡️
+</div>
+
+<!-- Línea del tiempo -->
+<div id="timeline-container">
+  <div id="timeline-line"></div>
+
+  <!-- Eventos -->
+  <div class="event" data-title="Cuando nos conocimos 💫" data-date="Enero 2022" data-text="Un día cualquiera que cambió todo." data-img="images/event1.jpg">
+    <div class="event-point"></div>
+  </div>
+  <div class="event" data-title="Primer viaje juntos ✈️" data-date="Febrero 2022" data-text="El inicio de nuestras aventuras." data-img="images/event2.jpg">
+    <div class="event-point"></div>
+  </div>
+  <div class="event" data-title="Nuestro aniversario 💞" data-date="Julio 2022" data-text="Un año más orbitando en el mismo universo." data-img="images/event3.jpg">
+    <div class="event-point"></div>
+  </div>
+  <div class="event" data-title="Nuestro hogar 🏡" data-date="Diciembre 2022" data-text="Donde florecen los sueños." data-img="images/event4.jpg">
+    <div class="event-point"></div>
+  </div>
+  <div class="event" data-title="Todavía tú 🌹" data-date="Mayo 2023" data-text="Y cada día, más." data-img="images/event5.jpg">
+    <div class="event-point"></div>
+  </div>
+  <div class="event" data-title="Primer aniversario juntos 💖" data-date="Agosto 2023" data-text="Celebrando un año de aventuras y amor." data-img="images/event6.jpg">
+    <div class="event-point"></div>
+  </div>
+  <div class="event" data-title="Nuestro futuro 🌟" data-date="Diciembre 2023" data-text="Soñando y planificando nuestra vida juntos." data-img="images/event7.jpg">
+    <div class="event-point"></div>
+  </div>
+</div>
+<canvas id="fireworks-canvas"></canvas>
+<!-- Tarjeta de evento -->
+<div id="card-overlay">
+  <div id="card">
+    <button id="close-card">✕</button>
+    <img id="card-img" src="" alt="Evento">
+    <h2 id="card-title"></h2>
+    <h4 id="card-date"></h4>
+    <p id="card-text"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
