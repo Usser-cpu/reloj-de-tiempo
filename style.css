@@ -13,7 +13,12 @@ body {
   100%{background-position:0% 50%;}
 }
 
-#main-title { text-align:center; padding:40px 0 20px; color:#ff4567; font-family:'Great Vibes',cursive;}
+#main-title { 
+  text-align:center; 
+  padding:40px 0 20px; 
+  color:#ff4567; 
+  font-family:'Great Vibes',cursive;
+}
 #main-title h1 { font-size:3rem; }
 
 #scroll-alert {
@@ -29,12 +34,10 @@ body {
   z-index: 1000;
   animation: fadeAlert 2s ease 0s 3;
 }
-
 @keyframes fadeAlert {0%,100%{opacity:0}50%{opacity:1}}
 
 #timeline-container {
   position: relative;
-  width: 3000px; /* más compacto */
   height: 200px;
   margin: 100px 0;
 }
@@ -62,16 +65,25 @@ body {
 .event:hover .event-point { transform:scale(1.5); box-shadow:0 0 20px rgba(255,140,160,0.9); }
 
 /* Card */
-#card-overlay {position:fixed; display:none; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.3); backdrop-filter:blur(6px); justify-content:center; align-items:center; z-index:1000;}
-#card {background:rgba(255,255,255,0.95); border-radius:20px; padding:20px; width:300px; text-align:center; position:relative; box-shadow:0 10px 30px rgba(0,0,0,0.3);}
-#card img {width:200px; height:200px; object-fit:cover; border-radius:15px; margin-bottom:10px;}
-#card h2 {margin:10px 0 5px 0;color:#ff4567;}
-#card h4 {margin:0 0 10px 0;color:#ff7fa3;}
-#card p {color:#444; font-size:0.95rem;}
+#card-overlay {
+  position:fixed; display:none; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.3); backdrop-filter:blur(6px); justify-content:center; align-items:center; z-index:1000;
+}
+#card {
+  background:rgba(255,255,255,0.95); border-radius:20px; padding:20px;
+  width:300px; max-width:90vw; max-height:90vh; text-align:center; position:relative; box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  overflow-y:auto;
+}
+#card img { width:100%; height:auto; object-fit:cover; border-radius:15px; margin-bottom:10px;}
+#card h2 { margin:10px 0 5px 0;color:#ff4567;}
+#card h4 { margin:0 0 10px 0;color:#ff7fa3;}
+#card p { color:#444; font-size:0.95rem;}
 #close-card {position:absolute; top:10px; right:10px; border:none; background:#ff7fa3; color:white; font-size:18px; width:30px; height:30px; border-radius:50%; cursor:pointer;}
 #close-card:hover {background:#ff4567;}
 
-#music-toggle {position:fixed; bottom:10px; right:10px; z-index:1000; background:#ff7fa3; color:white; border:none; border-radius:10px; padding:10px; cursor:pointer;}
+#music-toggle {
+  position:fixed; bottom:10px; right:10px; z-index:1000; background:#ff7fa3; color:white; border:none; border-radius:10px; padding:10px; cursor:pointer; font-size:1.2rem;
+}
 #music-toggle:hover {background:#ff4567;}
 
 /* Canvas para fuegos artificiales */
@@ -80,8 +92,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 400px; /* altura visible */
-  pointer-events: none; /* no interfiere con clicks ni hover */
-  z-index: 500; /* detrás de tarjetas y título */
+  height: 30vh; /* responsive */
+  pointer-events: none;
+  z-index: 500;
   display: block;
 }
